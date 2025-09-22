@@ -1,0 +1,16 @@
+services:
+  client:
+    build:
+      context: ./apps/client
+      dockerfile: Dockerfile
+    command: ["tail", "-f"]
+    volumes:
+      - ./apps/client:/app
+
+  sftp:
+    image: atmoz/sftp
+    volumes:
+      - ./sftp-data:/home/user/upload
+    command: user:password1:::upload
+    ports:
+      - "2222:22"
