@@ -2,9 +2,9 @@
 
 ## Steps
 
-1. Install packages:
+1. Set up environment
 ```sh
-make install
+make setup
 ```
 
 2. Start SFTP server and client container:

@@ -1,14 +1,16 @@
 services:
   client:
     build:
-      context: ./apps/client
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./apps/client/Dockerfile
     command: ["tail", "-f"]
     volumes:
       - ./apps/client:/app
 
   sftp:
-    image: atmoz/sftp
+    build:
+      context: .
+      dockerfile: ./apps/sftp/Dockerfile
     volumes:
       - ./sftp-data:/home/user/upload
     command: user:password1:::upload
