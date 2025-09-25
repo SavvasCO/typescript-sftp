@@ -5,5 +5,5 @@ setup:
 start:
 	docker compose up -d --build
 
-upload:
+run:
 	docker compose exec client npm start
