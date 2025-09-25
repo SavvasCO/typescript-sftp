@@ -2,3 +2,4 @@ node_modules/
 sftp-data/
 *.js
 ssh/
+azurite-data/

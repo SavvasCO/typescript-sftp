@@ -1,7 +1,7 @@
 import { connect } from './connection'
 
-export const uploadToSftp = async () => {
-    const sftp = await connect()
+export const uploadToSftp = async (privateKey: string) => {
+    const sftp = await connect(privateKey)
 
     const localFilePath = 'test-file.txt'
     const remoteFilePath = `/upload/${localFilePath}`
